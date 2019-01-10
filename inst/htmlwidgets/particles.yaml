@@ -1,0 +1,7 @@
+ dependencies:
+  - name: particlesjs
+    version: 2.0.0
+    src: particles
+    script: particles.min.js
+    stylesheet: particles.css
+    attachment: {"default": 'particlesjs-default.json', "fanny": "particlesjs-fanny.json"}
