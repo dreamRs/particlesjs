@@ -5,6 +5,7 @@ library(shinyparticles)
 
 ui <- fluidPage(
 
+  # Call particles in your UI
   particles(),
 
   headerPanel('Iris k-means clustering'),
@@ -25,7 +26,6 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
 
-  # Combine the selected variables into a new data frame
   selectedData <- reactive({
     iris[, c(input$xcol, input$ycol)]
   })
