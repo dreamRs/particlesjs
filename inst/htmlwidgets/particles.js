@@ -20,7 +20,7 @@ HTMLWidgets.widget({
         document.body.appendChild(particleel);
         particlebody.insertBefore(particleel, particlebody.firstChild);
 
-        var config = HTMLWidgets.getAttachmentUrl('particlesjs', 'default');
+        var config = HTMLWidgets.getAttachmentUrl('particles-config', 'config-json');
         particlesJS.load('particles-js', config, function() {
           console.log('callback - particles.js config loaded');
         });

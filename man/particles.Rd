@@ -4,8 +4,13 @@
 \alias{particles}
 \title{Particles background}
 \usage{
-particles()
+particles(path_config = NULL)
+}
+\arguments{
+\item{path_config}{Path to a config JSON for particles.js,
+visit \url{https://vincentgarreau.com/particles.js/} to create one.}
 }
 \description{
-Add a beautiful interactive particles background in Shiny apps and rmarkdown documents.
+Add a beautiful interactive particles background
+ in Shiny apps and rmarkdown documents.
 }

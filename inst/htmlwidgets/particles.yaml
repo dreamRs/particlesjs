@@ -4,4 +4,3 @@
     src: particles
     script: particles.min.js
     stylesheet: particles.css
-    attachment: {"default": 'particlesjs-default.json', "fanny": "particlesjs-fanny.json"}
