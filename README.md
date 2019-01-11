@@ -1,6 +1,6 @@
 # shinyparticles
 
-> Particles background for 'Shiny' applications and 'RMarkdown' documents with [particle.js](https://github.com/VincentGarreau/particles.js/)
+> Particles background for 'Shiny' applications and 'RMarkdown' documents with [particles.js](https://github.com/VincentGarreau/particles.js/)
 
 ## Installation
 
