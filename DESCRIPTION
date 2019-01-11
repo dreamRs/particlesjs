@@ -1,6 +1,6 @@
 Package: shinyparticles
 Title: Beautiful Background for 'Shiny' Applications and 'RMarkdown' Documents
-Version: 0.0.0.9000
+Version: 0.0.0.9100
 Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Vincent", "Garreau", role = "cph", comment = "particles.js library"))
@@ -9,8 +9,8 @@ License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    htmltools,
-    htmlwidgets
+    htmlwidgets,
+    jsonlite
 Suggests: 
     shiny
 URL: https://github.com/pvictor/shinyparticles

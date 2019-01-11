@@ -9,10 +9,8 @@ HTMLWidgets.widget({
     return {
 
       renderValue: function(x) {
-        //var sel = document.body;
-        //var selid = sel.id;
-        //sel.id = "particles-js";
 
+        // Suggestion: Custome HTML template ?
         var particlebody = document.body;
         var particleel = document.createElement("div");
         particleel.id = "particles-js";
@@ -20,10 +18,15 @@ HTMLWidgets.widget({
         document.body.appendChild(particleel);
         particlebody.insertBefore(particleel, particlebody.firstChild);
 
-        var config = HTMLWidgets.getAttachmentUrl('particles-config', 'config-json');
-        particlesJS.load('particles-js', config, function() {
-          console.log('callback - particles.js config loaded');
-        });
+        // with hymlDependency attachment: bug Chrome (access to xmlhttprequest at from origin 'null' has been blocked by cors policy)
+        //var config = HTMLWidgets.getAttachmentUrl('particles-config', 'config-json');
+        // With dataURI: bug IE
+        //var config = "data:text/plain;base64,"+window.btoa(JSON.stringify(x.config));
+        //particlesJS.load('particles-js', config, function() {
+        //  console.log('callback - particles.js config loaded');
+        //});
+        // dont use XMLHttpRequest, use config JSON directly
+        particlesJS("particles-js", x.config);
 
       },
 

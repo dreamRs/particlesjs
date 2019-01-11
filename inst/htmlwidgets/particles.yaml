@@ -4,3 +4,4 @@
     src: particles
     script: particles.min.js
     stylesheet: particles.css
+    all_files: true
