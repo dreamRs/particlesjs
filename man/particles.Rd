@@ -4,10 +4,10 @@
 \alias{particles}
 \title{Particles background}
 \usage{
-particles(path_config = NULL)
+particles(config = NULL)
 }
 \arguments{
-\item{path_config}{Path to a config JSON for particles.js,
+\item{config}{Path to a config JSON for particles.js,
 visit \url{https://vincentgarreau.com/particles.js/} to create one.}
 }
 \description{

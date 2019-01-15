@@ -1,6 +1,6 @@
 Package: shinyparticles
 Title: Beautiful Background for 'Shiny' Applications and 'RMarkdown' Documents
-Version: 0.0.0.9200
+Version: 0.0.0.9400
 Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Vincent", "Garreau", role = "cph", comment = "particles.js library"))

@@ -4,7 +4,7 @@
 #' @description Add a beautiful interactive particles background
 #'  in Shiny apps and rmarkdown documents.
 #'
-#' @param path_config Path to a config JSON for particles.js,
+#' @param config Path to a config JSON for particles.js,
 #'  visit \url{https://vincentgarreau.com/particles.js/} to create one.
 #'
 #'
@@ -75,17 +75,18 @@
 #'
 #' }
 #'
-particles <- function(path_config = NULL) {
-  if (is.null(path_config)) {
-    path_config <- system.file("particles/particlesjs-default.json", package = "shinyparticles")
-  } else {
-    path_config <- normalizePath(path = path_config, mustWork = TRUE)
+particles <- function(config = NULL) {
+  if (!is.list(config)) {
+    if (is.null(config)) {
+      config <- system.file("particles/particlesjs-default.json", package = "shinyparticles")
+    } else {
+      config <- normalizePath(path = config, mustWork = TRUE)
+    }
+    config <- fromJSON(txt = config)
   }
   createWidget(
     name = "particles",
-    x = list(
-      config = jsonlite::fromJSON(txt = path_config)
-    ),
+    x = list(config = config),
     width = NULL,
     height = 0,
     package = "shinyparticles",

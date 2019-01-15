@@ -1,3 +1,4 @@
+^data-raw$
 ^\.travis\.yml$
 ^shinyparticles\.Rproj$
 ^\.Rproj\.user$
