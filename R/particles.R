@@ -4,8 +4,10 @@
 #' @description Add a beautiful interactive particles background
 #'  in Shiny apps and rmarkdown documents.
 #'
-#' @param config Path to a config JSON for particles.js,
-#'  visit \url{https://vincentgarreau.com/particles.js/} to create one.
+#' @param config Path to a config JSON for particles.js or a list generated with \code{\link{particles_config}}.
+#'  Visit \url{https://vincentgarreau.com/particles.js/} to play with available options and create a custom JSON.
+#' @param target_id By default, a custom HTML tag is created to render the particles, you can target an existing
+#'  element by providing its id, a special value is \code{"body"} to attach particles t the page body.
 #'
 #'
 #' @importFrom htmlwidgets createWidget
@@ -75,7 +77,7 @@
 #'
 #' }
 #'
-particles <- function(config = NULL) {
+particles <- function(config = NULL, target_id = NULL) {
   if (!is.list(config)) {
     if (is.null(config)) {
       config <- system.file("particles/particlesjs-default.json", package = "shinyparticles")
@@ -86,7 +88,7 @@ particles <- function(config = NULL) {
   }
   createWidget(
     name = "particles",
-    x = list(config = config),
+    x = list(config = config, target_id = target_id),
     width = NULL,
     height = 0,
     package = "shinyparticles",
