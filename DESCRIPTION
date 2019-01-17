@@ -13,6 +13,6 @@ Imports:
     jsonlite
 Suggests: 
     shiny
-URL: https://github.com/pvictor/shinyparticles
-BugReports: https://github.com/pvictor/shinyparticles
+URL: https://github.com/dreamRs/shinyparticles
+BugReports: https://github.com/dreamRs/shinyparticles
 RoxygenNote: 6.1.1
