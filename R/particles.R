@@ -8,6 +8,7 @@
 #'  Visit \url{https://vincentgarreau.com/particles.js/} to play with available options and create a custom JSON.
 #' @param target_id By default, a custom HTML tag is created to render the particles, you can target an existing
 #'  element by providing its id, a special value is \code{"body"} to attach particles t the page body.
+#' @param element_id Id for the HTML tag created, it will be suffixed by \code{"-particles"}. Not used if \code{target_id} is provided.
 #'
 #'
 #' @importFrom htmlwidgets createWidget
@@ -77,7 +78,7 @@
 #'
 #' }
 #'
-particles <- function(config = NULL, target_id = NULL) {
+particles <- function(config = NULL, target_id = NULL, element_id = NULL) {
   if (!is.list(config)) {
     if (is.null(config)) {
       config <- system.file("particles/particlesjs-default.json", package = "shinyparticles")
@@ -92,7 +93,7 @@ particles <- function(config = NULL, target_id = NULL) {
     width = NULL,
     height = 0,
     package = "shinyparticles",
-    elementId = NULL
+    elementId = element_id
   )
 }
 

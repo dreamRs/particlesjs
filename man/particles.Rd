@@ -4,7 +4,7 @@
 \alias{particles}
 \title{Particles background}
 \usage{
-particles(config = NULL, target_id = NULL)
+particles(config = NULL, target_id = NULL, element_id = NULL)
 }
 \arguments{
 \item{config}{Path to a config JSON for particles.js or a list generated with \code{\link{particles_config}}.
@@ -12,6 +12,8 @@ Visit \url{https://vincentgarreau.com/particles.js/} to play with available opti
 
 \item{target_id}{By default, a custom HTML tag is created to render the particles, you can target an existing
 element by providing its id, a special value is \code{"body"} to attach particles t the page body.}
+
+\item{element_id}{Id for the HTML tag created, it will be suffixed by \code{"-particles"}. Not used if \code{target_id} is provided.}
 }
 \description{
 Add a beautiful interactive particles background
