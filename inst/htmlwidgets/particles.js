@@ -10,12 +10,24 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
-        var particlebody = document.body;
-        var particleel = document.createElement("div");
-        particleel.id = el.id + "-particles";
-        particleel.classList.add("particles");
-        document.body.appendChild(particleel);
-        particlebody.insertBefore(particleel, particlebody.firstChild);
+        var particles_id = el.id + "-particles";
+
+        if (x.target_id === null) {
+          var particlebody = document.body;
+          var particleel = document.createElement("div");
+          particleel.id = particles_id;
+          particleel.classList.add("particles");
+          document.body.appendChild(particleel);
+          particlebody.insertBefore(particleel, particlebody.firstChild);
+        } else {
+          if (x.target_id == "body") {
+            var body_particles = document.body;
+            body_particles.id = particles_id;
+          } else {
+            particles_id = x.target_id;
+          }
+        }
+
 
         /*
         // with hymlDependency attachment: bug Chrome (access to xmlhttprequest at from origin 'null' has been blocked by cors policy)
@@ -27,7 +39,7 @@ HTMLWidgets.widget({
         });
         */
         // dont use XMLHttpRequest, use config JSON directly
-        particlesJS(el.id + "-particles", x.config);
+        particlesJS(particles_id, x.config);
 
       },
 
