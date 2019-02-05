@@ -1,4 +1,5 @@
 library(shiny)
+library(shinyparticles)
 
 ui <- fluidPage(
   tags$div(
@@ -8,7 +9,6 @@ ui <- fluidPage(
       style = "position: absolute; top: 0; bottom: 0; right: 0; left: 0;"
     ),
     tags$div(
-      # class = "container",
       style = "text-align: center;padding-top: 150px;",
       tags$h1("Particles Demo"),
       tags$h4("Update config with controls below")

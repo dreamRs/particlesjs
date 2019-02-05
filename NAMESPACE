@@ -2,6 +2,9 @@
 
 export(particles)
 export(particles_config)
+export(shinydemo)
 export(update_particles)
 importFrom(htmlwidgets,createWidget)
 importFrom(jsonlite,fromJSON)
+importFrom(shiny,getDefaultReactiveDomain)
+importFrom(shiny,runApp)

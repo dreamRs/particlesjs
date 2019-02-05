@@ -18,3 +18,12 @@ default value will suffice}
 \description{
 Update Particles from the server in a Shiny app
 }
+\examples{
+if (interactive()) {
+
+shinydemo("container")
+
+shinydemo("fullpage")
+
+}
+}

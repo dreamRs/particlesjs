@@ -8,7 +8,16 @@
 #'
 #' @export
 #'
-# @examples
+#' @importFrom shiny getDefaultReactiveDomain
+#'
+#' @examples
+#' if (interactive()) {
+#'
+#' shinydemo("container")
+#'
+#' shinydemo("fullpage")
+#'
+#' }
 update_particles <- function(particles_id, config, session = shiny::getDefaultReactiveDomain()) {
   session$sendCustomMessage(
     type = "update-particles",
