@@ -13,7 +13,8 @@ Visit \url{https://vincentgarreau.com/particles.js/} to play with available opti
 \item{target_id}{By default, a custom HTML tag is created to render the particles, you can target an existing
 element by providing its id, a special value is \code{"body"} to attach particles t the page body.}
 
-\item{element_id}{Id for the HTML tag created, it will be suffixed by \code{"-particles"}. Not used if \code{target_id} is provided.}
+\item{element_id}{Id for the widget. It will also used for the id of the HTML tag created suffixed by \code{"-particles"}.
+Not used if \code{target_id} is provided.}
 }
 \description{
 Add a beautiful interactive particles background

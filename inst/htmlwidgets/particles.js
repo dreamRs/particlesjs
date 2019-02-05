@@ -16,7 +16,7 @@ HTMLWidgets.widget({
           var particlebody = document.body;
           var particleel = document.createElement("div");
           particleel.id = particles_id;
-          particleel.classList.add("particles");
+          particleel.classList.add("particles-full");
           document.body.appendChild(particleel);
           particlebody.insertBefore(particleel, particlebody.firstChild);
         } else {
@@ -49,3 +49,13 @@ HTMLWidgets.widget({
     };
   }
 });
+
+
+if (HTMLWidgets.shinyMode) {
+
+  Shiny.addCustomMessageHandler('update-particles',
+    function(message) {
+      particlesJS(message.id, message.config);
+  });
+
+}

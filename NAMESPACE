@@ -2,5 +2,6 @@
 
 export(particles)
 export(particles_config)
+export(update_particles)
 importFrom(htmlwidgets,createWidget)
 importFrom(jsonlite,fromJSON)
