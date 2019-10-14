@@ -7,9 +7,10 @@
 #' @param config Path to a config JSON for particles.js or a list generated with \code{\link{particles_config}}.
 #'  Visit \url{https://vincentgarreau.com/particles.js/} to play with available options and create a custom JSON.
 #' @param target_id By default, a custom HTML tag is created to render the particles, you can target an existing
-#'  element by providing its id, a special value is \code{"body"} to attach particles t the page body.
+#'  element by providing its id, a special value is \code{"body"} to attach particles to the page body.
 #' @param element_id Id for the widget. It will also used for the id of the HTML tag created suffixed by \code{"-particles"}.
 #'  Not used if \code{target_id} is provided.
+#' @param timeout Set a timeout before loading particles, maybe useful if you need initializing some HTML elements with percentage height.
 #'
 #'
 #' @importFrom htmlwidgets createWidget
@@ -79,7 +80,7 @@
 #'
 #' }
 #'
-particles <- function(config = NULL, target_id = NULL, element_id = NULL) {
+particles <- function(config = NULL, target_id = NULL, element_id = NULL, timeout = 0) {
   if (!is.list(config)) {
     if (is.null(config)) {
       config <- system.file("particles/particlesjs-default.json", package = "shinyparticles")
@@ -90,7 +91,7 @@ particles <- function(config = NULL, target_id = NULL, element_id = NULL) {
   }
   createWidget(
     name = "particles",
-    x = list(config = config, target_id = target_id),
+    x = list(config = config, target_id = target_id, timeout = timeout),
     width = NULL,
     height = 0,
     package = "shinyparticles",

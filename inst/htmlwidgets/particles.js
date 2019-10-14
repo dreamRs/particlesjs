@@ -30,7 +30,7 @@ HTMLWidgets.widget({
 
 
         /*
-        // with hymlDependency attachment: bug Chrome (access to xmlhttprequest at from origin 'null' has been blocked by cors policy)
+        // with htmlDependency attachment: bug Chrome (access to xmlhttprequest at from origin 'null' has been blocked by cors policy)
         //var config = HTMLWidgets.getAttachmentUrl('particles-config', 'config-json');
         // With dataURI: bug IE
         var config = "data:text/plain;base64,"+window.btoa(JSON.stringify(x.config));
@@ -39,7 +39,9 @@ HTMLWidgets.widget({
         });
         */
         // dont use XMLHttpRequest, use config JSON directly
-        particlesJS(particles_id, x.config);
+        setTimeout(function() {
+          particlesJS(particles_id, x.config);
+        }, x.timeout);
 
       },
 

@@ -4,17 +4,20 @@
 \alias{particles}
 \title{Particles background}
 \usage{
-particles(config = NULL, target_id = NULL, element_id = NULL)
+particles(config = NULL, target_id = NULL, element_id = NULL,
+  timeout = 0)
 }
 \arguments{
 \item{config}{Path to a config JSON for particles.js or a list generated with \code{\link{particles_config}}.
 Visit \url{https://vincentgarreau.com/particles.js/} to play with available options and create a custom JSON.}
 
 \item{target_id}{By default, a custom HTML tag is created to render the particles, you can target an existing
-element by providing its id, a special value is \code{"body"} to attach particles t the page body.}
+element by providing its id, a special value is \code{"body"} to attach particles to the page body.}
 
 \item{element_id}{Id for the widget. It will also used for the id of the HTML tag created suffixed by \code{"-particles"}.
 Not used if \code{target_id} is provided.}
+
+\item{timeout}{Set a timeout before loading particles, maybe useful if you need initializing some HTML elements with percentage height.}
 }
 \description{
 Add a beautiful interactive particles background
