@@ -1,17 +1,17 @@
-Package: shinyparticles
+Package: particlesjs
 Title: Beautiful Background for 'Shiny' Applications and 'RMarkdown' Documents
 Version: 0.1.1
-Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
+Authors@R: c(person("Fanny", "Meyer", role = "aut"),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Vincent", "Garreau", role = "cph", comment = "particles.js library"))
 Description: Add a particles background to 'Shiny' applications and 'RMarkdown' documents with JavaScript library 'particle.js'.
-License: GPL-3 | file LICENSE
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
     htmlwidgets,
     jsonlite,
     shiny
-URL: https://github.com/dreamRs/shinyparticles
-BugReports: https://github.com/dreamRs/shinyparticles
-RoxygenNote: 6.1.1
+URL: https://github.com/dreamRs/particlesjs
+BugReports: https://github.com/dreamRs/particlesjs
+RoxygenNote: 7.0.1

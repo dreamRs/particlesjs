@@ -17,7 +17,7 @@
 shinydemo <- function(mode = c("container", "fullpage")) {
   mode <- match.arg(mode)
   shiny::runApp(
-    appDir = system.file("shinydemo", mode, package = "shinyparticles"),
+    appDir = system.file("shinydemo", mode, package = "particlesjs"),
     display.mode = "showcase"
   )
 }

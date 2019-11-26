@@ -8,7 +8,7 @@ output:
 
 
 ```{r particles, echo = FALSE}
-shinyparticles::particles(path_config = "particlesjs-default.json")
+particlesjs::particles(path_config = "particlesjs-default.json")
 ```
 
 

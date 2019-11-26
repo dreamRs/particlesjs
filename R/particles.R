@@ -29,7 +29,7 @@
 #' if (interactive()) {
 #'
 #' library(shiny)
-#' library(shinyparticles)
+#' library(particlesjs)
 #'
 #'
 #' ui <- fluidPage(
@@ -83,7 +83,7 @@
 particles <- function(config = NULL, target_id = NULL, element_id = NULL, timeout = 0) {
   if (!is.list(config)) {
     if (is.null(config)) {
-      config <- system.file("particles/particlesjs-default.json", package = "shinyparticles")
+      config <- system.file("particles/particlesjs-default.json", package = "particlesjs")
     } else {
       config <- normalizePath(path = config, mustWork = TRUE)
     }
@@ -94,7 +94,7 @@ particles <- function(config = NULL, target_id = NULL, element_id = NULL, timeou
     x = list(config = config, target_id = target_id, timeout = timeout),
     width = NULL,
     height = 0,
-    package = "shinyparticles",
+    package = "particlesjs",
     elementId = element_id
   )
 }

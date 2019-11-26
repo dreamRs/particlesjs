@@ -1,6 +1,6 @@
 
 library(shiny)
-library(shinyparticles)
+library(particlesjs)
 
 ui <- fluidPage(
   tags$div(

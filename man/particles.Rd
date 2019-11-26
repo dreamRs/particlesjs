@@ -4,8 +4,7 @@
 \alias{particles}
 \title{Particles background}
 \usage{
-particles(config = NULL, target_id = NULL, element_id = NULL,
-  timeout = 0)
+particles(config = NULL, target_id = NULL, element_id = NULL, timeout = 0)
 }
 \arguments{
 \item{config}{Path to a config JSON for particles.js or a list generated with \code{\link{particles_config}}.
@@ -34,7 +33,7 @@ particles()
 if (interactive()) {
 
 library(shiny)
-library(shinyparticles)
+library(particlesjs)
 
 
 ui <- fluidPage(

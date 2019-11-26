@@ -1,20 +1,3 @@
-YEAR: 2019
-COPYRIGHT HOLDER: dreamRs
-
-The shinyparticles package as a whole is distributed under GPL-3 (GNU GENERAL PUBLIC
-LICENSE version 3).
-
-
-The shinyparticles package includes other open source software components. The following
-is a list of these components (full copies of the license agreements used by
-these components are included below):
-
-- particles.js, https://github.com/VincentGarreau/particles.js/
-
-
-particles.js
-=============
-
 The MIT License (MIT)
 
 Copyright (c) 2015, Vincent Garreau

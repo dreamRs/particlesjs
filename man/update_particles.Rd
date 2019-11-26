@@ -4,8 +4,11 @@
 \alias{update_particles}
 \title{Update Particles from the server in a Shiny app}
 \usage{
-update_particles(particles_id, config,
-  session = shiny::getDefaultReactiveDomain())
+update_particles(
+  particles_id,
+  config,
+  session = shiny::getDefaultReactiveDomain()
+)
 }
 \arguments{
 \item{particles_id}{Id of the targeted element.}
